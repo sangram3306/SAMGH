@@ -14,6 +14,7 @@ public class Test {
 	public static void main(String[] args) {
 
 		try {
+			//blob inserting
 			Class.forName("oracle.jdbc.OracleDriver");
 			Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "SAMDB", "sam123");
 			PreparedStatement pst = con.prepareStatement("insert into user_image values(?,?)");
@@ -28,6 +29,7 @@ public class Test {
 		}
 
 		try {
+			//blob retrieving
 			Class.forName("oracle.jdbc.OracleDriver");
 			Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "SAMDB", "sam123");
 			PreparedStatement pst = con.prepareStatement("select * from user_image where id=?");
