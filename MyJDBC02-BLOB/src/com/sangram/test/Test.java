@@ -24,6 +24,7 @@ public class Test {
 			pst.setBinaryStream(2, fis, file.length());
 			int update = pst.executeUpdate();
 			System.out.println(update);
+			System.out.println("just checking");
 		} catch (Exception e) {
 		  e.printStackTrace();
 		}
